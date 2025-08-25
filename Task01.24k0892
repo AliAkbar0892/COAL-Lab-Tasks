@@ -1,0 +1,28 @@
+INCLUDE Irvine32.inc
+
+.data
+
+msg BYTE "Name: Ali Akbar",0
+msf BYTE "RollNO: 24k-0892",0
+msh BYTE "Section: 3C",0
+msk BYTE "Course: COAL Lab02",0
+
+
+.code
+main proc
+
+mov edx,offset msg		 ;Name
+call writeString
+
+mov edx,offset msf		 ; Roll
+call writeString
+
+mov edx,offset msh		;Section
+call writeString
+
+mov edx,offset msk		;Course
+call writeString
+
+exit 
+main endp
+end main
